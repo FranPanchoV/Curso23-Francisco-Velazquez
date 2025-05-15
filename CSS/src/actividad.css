@@ -1,0 +1,27 @@
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.frase{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
+.frase div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.frase div p{
+  width: 290px;
+}
+
+img{
+  border-radius: 15px;
+}
+
