@@ -26,7 +26,6 @@ nav {
   padding: 20px;
   /*Radio de los bordes, se lee arriba izquierda, arriba derecha
   abajo izquierda, abajo derecha*/
-  border-radius: 0 0 15px 15px;
 }
 
 /*
@@ -51,8 +50,8 @@ nav div {
 nav div a:visited, nav div a:link {
   color:white;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
-
 .enlace:hover {
   color: black;
 }
@@ -71,7 +70,8 @@ nav div a:visited, nav div a:link {
 
 /*MAIN*/
 main {
-  background-color: black;
+  background-color: rgb(96, 128, 141);
+  background-image: linear-gradient(to right, #2c5097, #0055ff);
   display: flex;
   flex-direction: column;
   padding: 40px 20px;
@@ -87,6 +87,8 @@ header {
   height: 80vh;
   min-height: 80vh;
   background-color: aqua;
+  background-image: url("https://img.freepik.com/fotos-premium/color-abstracto-papel-plantillas_980736-10657.jpg");
+  background-size: cover;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-radius: 25px;
@@ -105,6 +107,26 @@ header > div{
   align-items: center;
   gap: 20px;
 }
+
+/*ANIMACIÓN*/
+.gradient-background {
+  background: linear-gradient(291deg,#2c5097,#0055ff,#ffffff);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 
 
