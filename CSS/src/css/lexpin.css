@@ -1,5 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
+/*
+  Medidas
+  px: pixeles (Absoluta)
+  %: porcentaje (relativa)
+  em: tamaño de la fuente del elemento padre
+  rem: tamaño de la fuente del elemento raíz
+  vh: porcentaje de la altura de la ventana
+  vw: porcentaje del ancho de la ventana
+  vmin: porcentaje del menor tamaño de la ventana
+  vmax: porcentaje del mayor tamaño de la ventana
+*/
+
+:root {
+  --color-principal: #0055ff;
+  --color-secundario: #2c5097;
+  --color-terciario: #ffffff;
+  --color-cuaternario: #000000;
+  --color-quintario: #ff9e02;
+  --titulares: 50px;
+  --subtitulares: 30px;
+  --texto: 20px;
+  --texto-pequeño: 15px;
+  font-size: 20px;
+
 * {
   margin: 0;
   padding: 0;
@@ -209,5 +233,35 @@ button:hover {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  p {
+    color: blue
+  }
+  header {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-movil{
+    display: none;
+  }
+  .menu-responsive{
+    display: block;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  p {
+    color: green
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  p {
+    color: yellow
   }
 }
