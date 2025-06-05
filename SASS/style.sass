@@ -1,23 +1,44 @@
-/* Variables
-$color-principal: blue
-$color-texto: white
 /* Mixins
-  Los mixins son funciones que se pueden reutilizar en el código
-  En palabras más simples, son fragmentos de código que se pueden reutilizar en
-  diferentes partes del proyecto
-@mixin flex($direccion, $justificacion, $alineacion)
+ Los mixins son funciones que se pueden reutilizar en el código
+ En palabras más simples, son fragmentos de código que se pueden reutilizar en
+ diferentes partes del proyecto
+@mixin flex($direccion, $justificacion, $alineacion, $gap)
   display: flex
   flex-direction: $direccion
   justify-content: $justificacion
   align-items: $alineacion
+  gap: $gap
 
-*
-  padding: 0
-  margin: 0
+@mixin estilizado($color, $tamano, $padding, $margen)
+  @if $color == null
+    $color: black
+  @else
+    color: $color
+  @if $tamano == null
+    font-size: 16px
+  @else
+    font-size: $tamano
+  @if $padding == null
+    padding: 0
+  @else
+    padding: $padding
+  @if $margen == null
+    margin: 0
+  @else
+    margin: $margen
 
-nav
-  background-color: $color-principal
-  @include flex(row, space-between, center)
-  div
-    color: $color-texto
-    @include flex(row, center, center)
+/*
+  Operadores lógicos
+  and (ambas condiciones deben ser verdaderas)
+  or (al menos una condición debe ser verdadera)
+  not (la condición debe ser falsa)
+  Ejemplo:
+  @if $color == blue and $tamano == 20px
+    color: $color
+    font-size: $tamano
+  @else if $color == red or $tamano == 16px
+    color: $color
+    font-size: $tamano
+  @else
+    color: black
+    font-size: 16px
