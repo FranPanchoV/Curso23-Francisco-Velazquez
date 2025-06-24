@@ -1,27 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="/Tailwind/style.css">
-</head>
-<body>
-  <div class="w-screen h-screen bg-blue-600 flex items-center justify-center">
-      <div class="grid grid-cols-3 gap-4">
-        <div class="w-16 h-16 bg-white rounded-md"></div>
-        <div class="w-16 h-16 bg-white rounded-md"></div>
-        <div class="w-16 h-16 bg-white rounded-md"></div>
-        <div class="w-16 h-16 bg-white rounded-md"></div>
-        <div class="w-16 h-16 bg-white rounded-md"></div>
-        <div class="w-16 h-16 bg-white rounded-md"></div>
+<main class="flex flex-wrap justify-between px-5">
+        <aside class="bg-[rgb(18,18,18)] top-20 z-10 h-[88vh] w-[400px] rounded-[8px] flex flex-col gap-4 p-2" aria-label="Sidebar">
+          <div class="flex items-between justify-between pb-[20px]">
+            <h2 class="text-white text-lg font-semibold">Tu biblioteca</h2>
+            <p class="text-neutral-400 text-2xl font-bold">+</p>
+          </div>
+        <section class="flex flex-col gap-4 h-[150px] overflow-y-auto scrollbar-track-[rgb(31,31,31)] hover:scrollbar-thumb-gray-400 scrollbar-thumb-rounded-full scrollbar-thumb-[rgb(31,31,31)] scrollbar-track-rounded-full">
+          <div class="bg-[rgb(31,31,31)] rounded-md p-4 text-white">
+            <h2 class="font-bold mb-2">Crea tu primera playlist</h2>
+            <p class="mb-4">¡Es muy fácil! Te vamos a ayudar</p>
+            <button class="bg-white text-black px-4 py-1 rounded-3xl transition-transform duration-200 hover:scale-105">
+            Crear playlist</button>
+          </div>
+          <div class="bg-[rgb(31,31,31)] rounded-md p-4 text-white">
+            <h2 class="mb-2">Busquemos algunos podcasts para seguir</h2>
+            <p class="mb-4">Te mantendremos al tanto de los nuevos episodios.</p>
+            <button class="bg-white text-black px-4 py-1 rounded-3xl transition-transform duration-200 hover:scale-105">
+            Explorar podcasts
+            </button>
+          </div>
+        </section>
+        <div class="w-full max-w-screen-sm text-xs mt-7 text-white flex flex-wrap gap-x-6 gap-y-3 md:justify-start px-4">
+          <p class="mb-0">Legal</p>
+          <p class="mb-0">Seguridad y Centro de Privacidad</p>
+          <p class="mb-0">Política de Privacidad</p>
+          <p class="mb-0">Cookies</p>
+          <p class="mb-0">Sobre Anuncios</p>
+          <p class="mb-0">Accesibilidad</p>
+          <p class="mb-0">Cookies</p>
+        </div>
+        <div class="w-full flex justify-left">
+          <button class="inline-flex items-center font-medium text-sm mt-6 gap-[4px] text-white border border-white rounded-3xl px-3 py-[3px] hover:scale-105 transition-transform duration-100">
+            <i class="fas fa-globe"></i> <span>Español de Latinoamérica</span>
+          </button>
+        </div>          
+        </aside>
+      <!-- Contenido principal -->
+      <div class=" bg-[rgb(33,33,33)] flex-1 ml-4 max-w-[88%] rounded-[8px]">
       </div>
-      <div>
-        <button class="w-12 h-14 bg-amber-50 rounded-4xl-4xl">iniciar</button>
-      </div>
-  </div>
+</main>
+      <footer class="bg-[rgb(18,18,18)] text-white p-4 mt-4 rounded-lg">
+        <div class="flex justify-between items-center">
+          <p class="text-sm">© 2023 CloneducativoSpotify. Todos los derechos reservados.</p>
+          <div class="flex gap-4">
+            <a href="#" class="text-white
 
-  
-</body>
+    </body>
 </html>
