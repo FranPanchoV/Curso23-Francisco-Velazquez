@@ -321,6 +321,10 @@ function validarNombre(nombre) {
   Si el texto contiene alguna de estas palabras, sustituye por "****" y retorna el texto modificado.
   Si no contiene ninguna, retorna el texto original.
 
+
+
+
+
   2. Según el siguiente array de objetos
   let personas = [
     { nombre: "Juan", edad: 25, pais: "España", sexo: "masculino" },
@@ -335,5 +339,60 @@ function validarNombre(nombre) {
 
   Luego haz un código que me cree un nuevo array con las personas sean de españa y sean hombres
 
+
+  let personas = [
+  { nombre: "Juan", edad: 25, pais: "España", sexo: "masculino" },
+  { nombre: "María", edad: 30, pais: "México", sexo: "femenino" },
+  { nombre: "Pedro", edad: 22, pais: "Argentina", sexo: "masculino" },
+  { nombre: "Ana", edad: 28, pais: "Chile", sexo: "femenino" },
+  { nombre: "Luis", edad: 35, pais: "España", sexo: "masculino" },
+];
+
+// 1. Personas mayores de 25
+let mayoresDe25 = personas.filter(persona => persona.edad > 25);
+console.log("Mayores de 25:", mayoresDe25);
+
+console.log(
+  personas.filter(
+    (persona) =>
+      persona.pais.toLocaleLowerCase() == "españa" &&
+      persona.sexo == "masculino"
+  )
+);
+
   Fecha de entrega: 11/07/25
 */
+
+
+function evaluar_malas_palabras(texto) {
+  //array de malas palabras
+  let malasPalabras = [
+    "tonto",
+    "chispas",
+    "recorcholis",
+    "rayos",
+    "caracoles",
+    "cielos",
+  ];
+
+  //por cada mala palabra en el array ejecuto una función
+  malasPalabras.forEach((palabra) => {
+    //si el texto incluye la mala palabra ejecuto un codigo
+    if (texto.includes(palabra)) {
+      //hago que texto sea igual al texto modificado, es decir. El texto en minuscula con la
+      //mala palabra remplazada
+      texto = texto
+        .toLowerCase()
+        .replaceAll(palabra, "*".repeat(palabra.length));
+    }
+  });
+
+  return texto;
+}
+
+console.log(
+  evaluar_malas_palabras(
+    "rayos, jhonny es un tonto. Cielos, esto me desespera."
+  )
+);
+
